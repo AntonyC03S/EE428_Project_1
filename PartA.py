@@ -10,7 +10,7 @@ img2 = cv2.imread('images/group_photo.jpg', cv2.IMREAD_COLOR)
 cv2.imshow('Image 1', img1)
 cv2.imshow('Image 2', img2)
 
-# Convert the image to grayscale image 
+# Convert the image to grayscale image
 gray_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
 gray_img2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)
 
