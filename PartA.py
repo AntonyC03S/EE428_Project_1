@@ -6,9 +6,11 @@ import matplotlib.pyplot as plt
 # Load the images
 img1 = cv2.imread('images/landscape.png', cv2.IMREAD_COLOR)
 img2 = cv2.imread('images/group_photo.jpg', cv2.IMREAD_COLOR)
-
+# img2 = cv2.resize(img2, None, fx=0.25, fy=0.25, interpolation=cv2.INTER_AREA)
 cv2.imshow('Image 1', img1)
 cv2.imshow('Image 2', img2)
+cv2.waitKey(0)
+cv2.destroyAllWindows() 
 
 # Convert the image to grayscale image
 gray_img1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
@@ -58,28 +60,23 @@ def reduce_resolution(image):
     reduce_image = np.array(reduce_image)
     return reduce_image
 
+img1_reduce1 = reduce_resolution(gray_img1)
+img1_reduce2 = reduce_resolution(img1_reduce1)
+img1_reduce3 = reduce_resolution(img1_reduce2)
 
-image = cv2.imread("images/landscape.png")
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-cv2.imshow("Displayed Image",gray_image)
-
+cv2.imshow("Reduce1",img1_reduce1)
+cv2.imshow("Reduce2",img1_reduce2)
+cv2.imshow("Reduce2",img1_reduce3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-reduce1 = reduce_resolution(gray_image)
-cv2.imshow("Reduce1",reduce1)
+img2_reduce1 = reduce_resolution(gray_img2)
+img2_reduce2 = reduce_resolution(img2_reduce1)
+img2_reduce3 = reduce_resolution(img2_reduce2)
 
+cv2.imshow("Reduce1",img2_reduce1)
+cv2.imshow("Reduce2",img2_reduce2)
+cv2.imshow("Reduce2",img2_reduce3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-reduce2 = reduce_resolution(reduce1)
-cv2.imshow("Reduce2",reduce2)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-
-reduce3 = reduce_resolution(reduce2)
-cv2.imshow("Reduce2",reduce3)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
