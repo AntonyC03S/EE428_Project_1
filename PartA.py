@@ -66,17 +66,19 @@ img1_reduce3 = reduce_resolution(img1_reduce2)
 
 cv2.imshow("Reduce1",img1_reduce1)
 cv2.imshow("Reduce2",img1_reduce2)
-cv2.imshow("Reduce2",img1_reduce3)
+cv2.imshow("Reduce3",img1_reduce3)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 img2_reduce1 = reduce_resolution(gray_img2)
 img2_reduce2 = reduce_resolution(img2_reduce1)
 img2_reduce3 = reduce_resolution(img2_reduce2)
+img2_reduce4 = reduce_resolution(img2_reduce3)
 
 cv2.imshow("Reduce1",img2_reduce1)
 cv2.imshow("Reduce2",img2_reduce2)
-cv2.imshow("Reduce2",img2_reduce3)
+cv2.imshow("Reduce3",img2_reduce3)
+cv2.imshow("Reduce4",img2_reduce4)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
