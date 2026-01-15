@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import os
-import matplotlib.pyplot as plt
 
 # Load the images
 img1 = cv2.imread('images/landscape.png', cv2.IMREAD_COLOR)
@@ -67,6 +66,7 @@ img1_reduce3 = reduce_resolution(img1_reduce2)
 cv2.imshow("Reduce1",img1_reduce1)
 cv2.imshow("Reduce2",img1_reduce2)
 cv2.imshow("Reduce3",img1_reduce3)
+print(gray_img1.shape, img1_reduce1.shape, img1_reduce2.shape, img1_reduce3.shape)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
@@ -79,6 +79,7 @@ cv2.imshow("Reduce1",img2_reduce1)
 cv2.imshow("Reduce2",img2_reduce2)
 cv2.imshow("Reduce3",img2_reduce3)
 cv2.imshow("Reduce4",img2_reduce4)
+print(gray_img2.shape, img2_reduce1.shape, img2_reduce2.shape, img2_reduce3.shape, img2_reduce4.shape)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
